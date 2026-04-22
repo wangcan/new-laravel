@@ -1,0 +1,11 @@
+{
+    "name": "ShowDocManager",
+    "alias": "showdocmanager",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\ShowDocManager\\Providers\\ShowDocManagerServiceProvider"
+    ],
+    "files": []
+}
