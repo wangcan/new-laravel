@@ -25,7 +25,7 @@ class ShowDocApiClient
     public function getCatalogTree(): array
     {
         $response = Http::asForm()->post(
-            $this->baseUrl . '/server/index.php?s=/api/open/getCatTree',
+            $this->baseUrl . '/server/index.php?s=/api/open/getCatalogTree',
             [
                 'api_key' => $this->apiKey,
                 'api_token' => $this->apiToken,
@@ -90,9 +90,11 @@ class ShowDocApiClient
         if ($parentCatId) {
             $data['parent_cat_id'] = $parentCatId;
         }
+        \Log::debug($this->baseUrl . '/server/index.php?s=/api/open/createCatalog');
+        \Log::debug($data);
 
         $response = Http::asForm()->post(
-            $this->baseUrl . '/server/index.php?s=/api/open/createCat',
+            $this->baseUrl . '/server/index.php?s=/api/open/createCatalog',
             $data
         );
 
