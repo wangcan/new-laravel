@@ -7,8 +7,10 @@
     "license": "MIT",
     "require": {
         "php": "^8.3",
+        "edulazaro/larascraper": "^1.1",
         "laravel/framework": "^13.0",
         "laravel/tinker": "^3.0",
+        "mongodb/laravel-mongodb": "^5.7",
         "nwidart/laravel-modules": "^13.0"
     },
     "require-dev": {
