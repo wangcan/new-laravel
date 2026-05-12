@@ -17,6 +17,10 @@ class RouteServiceProvider extends ServiceProvider
     public function boot(): void
     {
         parent::boot();
+        // 将当前模块名称注册到容器中，可以被任何地方解析
+        $this->app->singleton('current.module', function ($app) {
+            return 'Scraper'; // 手动指定当前模块名
+        });
     }
 
     /**
